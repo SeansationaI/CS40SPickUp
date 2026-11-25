@@ -9,13 +9,15 @@ public class App {
         pete.attack();
 
         // Gain experience, putting level above 70
-        setLevel(75);
-        
+        pete.setLevel(75);
+        //Syntax error missing Object
+
         // Print dragon object
         System.out.println(pete);
         
         // Dragon attack with fire (level > 70)
+        
         pete.attack();
-
+        //Missing object before method
     }
 }

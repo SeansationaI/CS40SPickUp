@@ -5,7 +5,8 @@ public class Dragon {
     
     public Dragon(String dragonName, int dragonLevel)
     {
-        dragonName = name;
+        //Logic Error 
+        name = dragonName;
         level = dragonLevel;
         
         // Use level value to determine state of canBreatheFire
@@ -23,7 +24,9 @@ public class Dragon {
     
     public String getName()
     { 
+        //Missing Return method
         System.out.println(name);
+        return name;
     }
     
     
@@ -51,15 +54,16 @@ public class Dragon {
          String charToPrint = "";
          if(canBreatheFire)
          {
-             charToPrint = "🔥";
+             charToPrint = "f";
          } else 
          {
-             charToPrint = "💨";
+             charToPrint = "s";
          }
          
          // Print all possible complete rows
         int numRows = level / 10;
-         for(int i = 0; i > numRows; i++)
+        //Logic error doesnt print because i was > num rows
+         for(int i = 0; i < numRows; i++)
          {
              for(int j = 0; j < 10; j++)
              {
@@ -69,7 +73,7 @@ public class Dragon {
          }
          
          // Print the incomplete row(s)
-         int leftover = level % 0;
+         int leftover = level % 10;
          for(int j = 0; j < leftover; j++)
          {
              System.out.print(charToPrint);
